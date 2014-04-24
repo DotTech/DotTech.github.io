@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is a raycasting engine written in JavaScript and rendered on an HTML5 canvas" />
+    <meta name="author" content="Ruud van Falier" />
+
+    <title>HTML5 Raycaster Demo</title>
+    
+    <link type="text/css" href="css/main.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/raycaster.js?version=0.9.1"></script>
+</head>
+<body>
+
+    <div id="wrapper">
+        
+        <h1>HTML5 Raycaster Demo</h1>
+        <p id="introduction">
+            This is a basic raycasting engine rendered on an HTML5 canvas.<br />
+            See <a href="readme.txt">readme.txt</a> for more information.<br />
+            <br />
+            Code is available on <a href="https://github.com/Stribe/HTML5-Raycaster">GitHub</a><br />
+            Old, simpler, version with grid-based engine still <a href="http://www.dottech.nl/raycaster/v0.3/">available here</a>.<br />
+            <br />
+            Runs fastest in Chrome or IE9 and pretty slow in FF. Not yet tested in other browsers.<br />
+            If you don't see anything, you should update your browser...<br />
+            <br />
+            <strong>Usage: W/S = walk, Q/E = turn, A/D = strafe</strong>.<br />
+        </p>
+        
+        <canvas id="raycaster" width="320" height="240"></canvas>
+        
+        <ul id="settings">
+            <li>
+                <input type="checkbox" id="chkTextures" value="true" checked="checked" />
+                <label for="chkTextures">textures</label>
+            </li>            
+            <li>
+                <input type="checkbox" id="chkLighting" value="true" checked="checked" />
+                <label for="chkLighting">lighting</label>
+            </li>            
+            <li>
+                <input type="checkbox" id="chkMiniMap" value="true" />
+                <label for="chkMiniMap">map</label>
+            </li>            
+            <li>
+                <input type="checkbox" id="chkSky" value="true" checked="checked" />
+                <label for="chkSky">sky</label>
+            </li>            
+            <li>
+                <input type="checkbox" id="chkSprites" value="true" checked="checked" />
+                <label for="chkSprites">sprites</label>
+            </li>
+            <!--li>
+                <input type="checkbox" id="chkFloor" value="true" />
+                <label for="chkFloor">floorcasting</label>
+            </li-->            
+            <li style="clear: left">
+                <label for="ddlLevel">Demo level:&nbsp;</label>
+                <select id="ddlLevel">
+                    <option value="0">default</option>
+                    <option value="1">elevation *</option>
+                    <option value="2">elevated walls *</option>
+                </select>
+            </li>
+            <li>
+                <label for="ddlSize">Size:&nbsp;</label>
+                <select id="ddlSize">
+                    <option value="640">640x480</option>
+                    <option value="320">320x240</option>
+                </select>
+            </li>
+            <li>* = contains unfinished features</li>
+        </ul>
+        
+        <div id="keys">
+            <div id="keyLeftStrafe" data-code="65" class="keys">&lsaquo;</div>
+            <div id="keyLeft" data-code="37" class="keys">&larr;</div>
+            <div id="keyUp" data-code="38" class="keys">&uarr;</div>
+            <div id="keyDown" data-code="40" class="keys">&darr;</div>
+            <div id="keyRight" data-code="39" class="keys">&rarr;</div>
+            <div id="keyRightStrafe" data-code="68" class="keys">&rsaquo;</div>
+        </div>
+        
+        <footer>
+            Version 0.9.1, created by <a href="http://www.dottech.nl">Ruud van Falier</a> in 2011
+        </footer>
+        
+    </div>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-4807753-7']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    
+</body>
+</html>
