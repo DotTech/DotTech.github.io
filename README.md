@@ -1,4 +1,4 @@
-dottech.github.io
+DotTech.github.io
 =================
 
 GitHub Pages for DotTech
